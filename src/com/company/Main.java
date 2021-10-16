@@ -24,7 +24,7 @@ public class Main {
             String text = String.format("Game №%s",
                     g.numGame) +" "+ formatForDateNow.format(dateNow) + " Загаданная строка " + g.getRandNumArr();
             appendUsingFileWriter(namefile, text);
-            System.out.println(g.getRandNumArr());
+            //System.out.println(g.getRandNumArr());
             while (true) {
                 bulls = g.bulls;
                 cows = g.cows;
@@ -43,9 +43,12 @@ public class Main {
                 g.setInputNumArr();
                 g.setBullsCows();
             }
-            System.out.println("Чтобы выйти из игры намите 1 ");
-            if (1 != scanner.nextInt()) {
-                continue;
+            System.out.println("Чтобы выйти из игры намите 1, чтобы продолжить - 2");
+            switch (scanner.nextInt()) {
+                case 1:
+                    break;
+                default:
+                    continue;
             }
             break;
         }
