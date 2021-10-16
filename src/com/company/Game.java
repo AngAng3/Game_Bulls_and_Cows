@@ -45,6 +45,7 @@ public class Game {
                 if (k == mas2[j]) {
                     this.cows++;
                     mas2[j] = -11;
+                    break;
                 }
             }
         }
