@@ -11,14 +11,14 @@ public class Main {
         String namefile = "Game_Bulls_and_Cows.log";
         Scanner scanner = new Scanner(System.in);
         System.out.println("Игра Быки и коровы");
-        int countAtt = 0;
+        int countAtt;
         int bulls, cows;
 
         while (true) {
             System.out.println("Загадано 4х-значное число, введите свой вариант");
             Game g = new Game();
             g.incremNumGame();
-
+            countAtt = 0;
             Date dateNow = new Date();
             SimpleDateFormat formatForDateNow = new SimpleDateFormat("dd.MM.yyyy hh:mm");
             String text = String.format("Game №%s",
